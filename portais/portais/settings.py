@@ -16,7 +16,9 @@ NEWSPIDER_MODULE = 'portais.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'portais (+http://www.yourdomain.com)'
+USER_AGENT = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) '
+              'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61'
+              '.0.3163.100 Safari/537.36')
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -64,9 +66,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'portais.pipelines.PortaisPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'portais.pipelines.PortaisPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -88,3 +90,6 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+MONGO_URI = 'localhost'
+MONGO_DATABASE = 'portais'
